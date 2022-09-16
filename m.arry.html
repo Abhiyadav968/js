@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            background-color: aqua;
+            width: 50%;
+            text-align: center;
+            height: 200px;
+        }
+        
+        tr:hover {
+            background-color: rgb(36, 195, 195);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var ary = [
+            ["Name","Age","Gender","Diggre",],
+            ["Abhishek","18","Male","BCA",], 
+            ["Abhi  raj","18","Male","BCA",],
+            ["Abhishek Raj","18","Male","BCA",],
+            ["Ayansh raj","18","Male","BCA",]
+        ];
+        document.write(ary.length)
+        document.write("<table border='1px' cellspacing='0'>")
+        for(var a =0 ; a < ary.length ; a++){
+            document.write("<tr>")
+            for(var b=0; b < ary[a].length ; b++){
+                document.write("<td>" +ary[a][b]+"</td> " )
+            }
+            document.write("<tr>")
+        }
+        document.write("</table> ")
+    </script>
+</body>
+</html>
