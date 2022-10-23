@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        #input {
+            padding: 5px;
+            font-size: 18px;
+            margin-top: 15%;
+        }
+
+        .main {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .container {
+            text-align: center;
+            width: 400px;
+            height: 600px;
+            /* margin: 0% 0% 0% 35%; */
+            background-color: aqua;
+            background: url(./colud.jfif);
+        }
+
+        .slice {
+            /* display: flex; */
+            justify-content: center;
+        }
+
+        #ida {
+            margin-top: 20px;
+            font-size: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="slice">
+                <input type="text" id="input" onkeyup="save(this)">
+            </div>
+            <div id="ida"></div>
+        </div>
+    </div>
+
+    <script>
+        var data = [
+            {
+                id: 1,
+                name: "Bansdih",
+                deg: 28
+            },
+            {
+                id: 2,
+                name: "Chainpur",
+                deg: 35
+            },
+            {
+                id: 3,
+                name: "Sahpur",
+                deg: 28
+            },
+        ]
+
+        function save(a) {
+            // let = document.getElementById("input").value;
+            var a = a.value;
+            // console.log(a)
+
+            data.map((b) => {
+
+                // var degi = JSON.stringify(b);
+                if (b.name === a) {
+                    document.getElementById("ida").innerHTML = b.name+"<br>" +"<br>"+ "<br>"+b.deg + " °C";
+                    console.log(b)
+                } else {
+                    console.log("none")
+                }
+
+
+            })
+
+        }
+
+
+    </script>
+</body>
+
+</html>
